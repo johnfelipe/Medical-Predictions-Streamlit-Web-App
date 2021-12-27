@@ -1,11 +1,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from streamlit.proto.Button_pb2 import Button
 
 rad=st.sidebar.radio("Navigation Menu",["Home","Covid-19","Diabetes","Heart Disease"])
 
