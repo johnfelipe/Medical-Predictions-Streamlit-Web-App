@@ -19,6 +19,7 @@ The features taken into consideration are as follows=
 1. Covid-19 = dry cough, fever, sore throat, breathing problem
 2. Diabetes = glucose, insulin, BMI, age
 3. Heart Disease = chest pain, BP, cholestrol, max HR
+
 The feature selection is carefully done under the supervision of a medical science student.
 
 
