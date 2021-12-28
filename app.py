@@ -85,7 +85,7 @@ if rad=="Heart Disease":
     chestpain=st.number_input("Rate Your Chest Pain (1-4)",min_value=1,max_value=4,step=1)
     bp=st.number_input("Enter Your Blood Pressure Rate (95-200)",min_value=95,max_value=200,step=1)
     cholestrol=st.number_input("Enter Your Cholestrol Level Value (125-565)",min_value=125,max_value=565,step=1)
-    maxhr=st.number_input("Enter You Maximum Heart Rate",min_value=70,max_value=200,step=1)
+    maxhr=st.number_input("Enter You Maximum Heart Rate (70-200)",min_value=70,max_value=200,step=1)
     prediction3=model3.predict([[chestpain,bp,cholestrol,maxhr]])[0]
 
     if st.button("Predict"):
