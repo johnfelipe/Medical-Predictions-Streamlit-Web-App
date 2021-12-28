@@ -5,7 +5,7 @@ import plotly.express as px
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
-rad=st.sidebar.radio("Navigation Menu",["Home","Covid-19","Diabetes","Heart Disease"])
+rad=st.sidebar.radio("Navigation Menu",["Home","Covid-19","Diabetes","Heart Disease","Plots])
 
 #Home Page
 if rad=="Home":
@@ -78,7 +78,7 @@ x3_train,x3_test,y3_train,y3_test=train_test_split(x3,y3,test_size=0.2,random_st
 model3=RandomForestClassifier()
 model3.fit(x3_train,y3_train)
 
-#Diabetes Page
+#Heart Disease Page
 if rad=="Heart Disease":
     st.header("Know If You Are Affected By Heart Disease")
     st.write("All The Values Should Be In Range Mentioned")
@@ -93,3 +93,17 @@ if rad=="Heart Disease":
             st.warning("You Might Be Affected By Diabetes")
         elif str(prediction3)=="Absence":
             st.success("You Are Safe")
+                                        
+                                        
+if rad=="Plots":
+    type=st.selectbox("Which Plot Do You Want To See?",["Covid-19","Diabetes","Heart Disease"])
+    if type=="Covid-19":
+        fig=px.scatter(df1,x="Difficulty in breathing",y="Infected with Covid19")
+        st.plotly_chart(fig)
+
+    elif type=="Diabetes":
+        fig=px.scatter(df2,x="Glucose",y="Outcome")
+        st.plotly_chart(fig)
+    elif type=="Heart Disease":
+        fig=px.scatter(df3,x="BP",y="Heart Disease")
+        st.plotly_chart(fig)
