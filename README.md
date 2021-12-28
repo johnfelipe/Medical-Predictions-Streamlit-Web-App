@@ -13,3 +13,13 @@ We can land into each prediction site of the web app from the options in the Nav
 
 
 Each prediction is done with the help of 4 features which will be taken as input from the user.
+The most relevant features are taken into consideration for prediction also these features can be found out with simple tests or analysis without visiting any doctor.
+So the victim can get a broad overview of their health condition.
+The features taken into consideration are as follows=
+1. Covid-19 = dry cough, fever, sore throat, breathing problem
+2. Diabetes = glucose, insulin, BMI, age
+3. Heart Disease = chest pain, BP, cholestrol, max HR
+The feature selection is carefully done under the supervision of a medical science student.
+
+
+After the modeling part the model is deployed using Streamlit library on Streamlit Share so that the app is available for usage for everyone.
